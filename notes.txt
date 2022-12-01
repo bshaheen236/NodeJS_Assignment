@@ -1,0 +1,23 @@
+--> MVC Architecture :- It stand for Model-View-Controller. It is a design pattern for our projects.In MVC pattern, application and its development are divided into three interconnected part.It helps in allowing for efficient code reuse and the parallel development of the application. The code is divided into 3 major layers model , View , Controller 
+   -> Model :- It represents the structure of data, the format and the constraints with which it is stored. It maintaines the data of the application.(Database part)
+     It is known as Data Access Layer of the Application.
+   -> View :- It is what presented to the user. Views utilize the Model and present data in a form in which the user wants.They consist of static and dynamic pages which are rendered or sent to the user ehen the user requests them. It is known as Presentation Layer of the application.
+   -> COntroller :- It controls the requests of the user and then generates appropriate response which is fed to the viewer.Then controller sent req to model to access data , then response is came into the controller then controller sent the output to the View.
+       Model is data part 
+       View is User Interface Part 
+       COntroller is request -response handler 
+
+       -> Dynamic routes :- pass data from Url and getting in our method 
+          to access that data we have 
+            req.params. 
+            http://localhost:7788/products/mens 
+            app.get("/products/:cat",(req,res)=>{
+                 let cname=req.params.cat;
+            })
+        -> Query Params (Query string)
+               http://localhost:7788/products?cat=1 
+          *** req.param method only gets the route parameters whereas the req.query method checks the query string parameters.
+            http://localhost:7788/products?cat=1 
+            app.get('/products',(req,res)=>{
+                  let catid=req.query.cat;
+            })

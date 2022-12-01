@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>login</title>
+</head>
+
+<body>
+  {{> nav}}
+  <div class="container mt-0">
+    <h1 class="text-center bg-light"><u><i>Login Page</i></u></h1>
+    {{#if loginflag}}
+    <div class="alert alert-danger" role="alert">
+      {{msg}}
+    </div>
+    {{/if}}
+    <div class="row">
+      <div class="col-6">
+        <form method="post" action="/users/login-data">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              required placeholder="enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input name="pass" type="password" class="form-control" id="exampleInputPassword1" required placeholder="enter your password">
+          </div>
+          <button type="submit" class="btn btn-success ">Submit</button>
+
+        </form>
+      </div>
+      <div class="col-6">
+        <img align="right" alt="Coding" width="350"
+          src="https://camo.githubusercontent.com/6607041227d81f650340ff070cc2843518acad359b57e5bb054a9fb7127aa041/68747470733a2f2f63646e2e6472696262626c652e636f6d2f75736572732f323634363432332f73637265656e73686f74732f353530373139362f636f6d70757465722e676966">
+      </div>
+    </div>
+  </div>
+  <img src="../static/footer.jpg" alt="" height="280px" width="100%">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

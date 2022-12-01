@@ -1,0 +1,27 @@
+{{> nav}}
+<div style="background-image:url(../static/login2.jpg); background-size: 100% 100%;">
+    <h2 class="text-center" style="color:black"><u>-:Details:-</u></h2>
+    <table class="table table-striped mb-1">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Phone</th>
+                <th scope="col">City</th>
+            </tr>
+        </thead>
+        {{#each info}}
+        <tbody>
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.age}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.city}}</td>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</div>
+<img src="../static/footer10.jpg" alt="" height="180px" width="100%">

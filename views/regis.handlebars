@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Registraton </title>
+</head>
+
+<body style="background-image:url(/static/login3.jpg); background-size: 100% 100%;">
+  {{> nav}}
+  <section class="container">
+    <h2 class="text-center border border-3 border-dark bg-secondary"><i>Registration Page</i></h2>
+    <form method="post" action="/users/postData">
+      {{#if status}}
+      <div class="alert alert-success" role="alert">
+        {{msg}}
+      </div>
+      {{/if}}
+      <div class="form-group">
+        <label><b class="text-primary">Name</b></label>
+        <input type="text" name="name" class="form-control" />
+        {{#if nameErr}}
+        <p class="text-danger">{{nameErr}}</p>
+        {{/if}}
+      </div>
+      <div class="form-group">
+        <label><b class="text-primary"> Email </b></label>
+        <input type="text" name="email" class="form-control" />
+        {{#if emailErr}}
+        <p class="text-danger">{{emailErr}}</p>
+        {{/if}}
+      </div>
+      <div class="form-group">
+        <label><b class="text-primary">Password</b></label>
+        <input type="password" name="pass" class="form-control" />
+        {{#if passErr}}
+        <p class="text-danger">{{passErr}}</p>
+        {{/if}}
+      </div>
+      <div class="form-group">
+        <label><b class="text-primary">Age</b></label>
+        <input type="text" name="age" class="form-control" />
+        {{#if ageErr}}
+        <p class="text-danger">{{ageErr}}</p>
+        {{/if}}
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"><b class="text-primary">Phone</b></label>
+        <input name="phone" type="text" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="form-group">
+        <label><b class="text-primary">City</b></label>
+        <input type="text" name="city" class="form-control" />
+        {{#if cityErr}}
+        <p class="text-danger">{{cityErr}}</p>
+        {{/if}}
+      </div>
+      <input type="submit" value="Submit" class="btn btn-success" />
+    </form>
+  </section>
+  <img src="../static/footer4.jpg" alt="" height="170px" width="100%">
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
